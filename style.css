@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eeeeee;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+
+
+nav {
+    background: #262626;
+    padding: 0 5%;
+    display: flex;
+    gap: 4px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover, nav a.ativo {
+    background: #333;
+    border-bottom-color: #1684d8;
+}
+
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 28px auto;
+}
+
+.pagina-titulo {
+    margin: 0 0 18px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.bloco {
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+.bloco h2 {
+    font-size: 18px;
+    margin: 0 0 18px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #ddd;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo.largo {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    padding: 10px;
+    font: inherit;
+    background: #fff;
+}
+
+textarea {
+    min-height: 82px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 1px solid #1677c8;
+    border-color: #1677c8;
+}
+
+.acoes-form {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.botao {
+    border: 0;
+    border-radius: 3px;
+    background: #176fb2;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.botao:hover {
+    background: #10598f;
+}
+
+.botao.cinza {
+    background: #666;
+}
+
+.botao.vermelho {
+    background: #b83232;
+}
+
+.botao.pequeno {
+    padding: 7px 9px;
+    font-size: 12px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 11px 9px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #f1f1f1;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 13px;
+}
+
+tr:hover td {
+    background: #fafafa;
+}
+
+.tabela {
+    overflow-x: auto;
+}
+
+.acoes {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.acoes form {
+    margin: 0;
+}
+
+.busca {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.busca input {
+    max-width: 420px;
+}
+
+.aviso {
+    padding: 11px 13px;
+    background: #e4eff8;
+    border-left: 4px solid #176fb2;
+    margin-bottom: 15px;
+}
+
+.aviso.erro {
+    background: #f9e5e5;
+    border-left-color: #b83232;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 8px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.vazio {
+    color: #666;
+    padding: 15px 0;
+}
+
+@media (max-width: 700px) {
+    main {
+        width: 94%;
+        margin-top: 18px;
+    }
+
+    nav {
+        padding: 0 3%;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo.largo, .acoes-form {
+        grid-column: auto;
+    }
+
+    .busca {
+        flex-direction: column;
+    }
+
+    .busca input {
+        max-width: none;
+    }
+}
